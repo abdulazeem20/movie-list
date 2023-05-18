@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Terminator",
+        "genre": "Action",
+        "stock": 6,
+        "rate": 2.5
+    },
+    {
+        "title": "Die Hard",
+        "genre": "Action",
+        "stock": 5,
+        "rate": 2.5
+    },
+    {
+        "title": "Get Out",
+        "genre": "Thriller",
+        "stock": 8,
+        "rate": 3.5
+    },
+    {
+        "title": "Trip to Italy",
+        "genre": "Comedy",
+        "stock": 7,
+        "rate": 3.5
+    },
+    {
+        "title": "Airplane",
+        "genre": "Comedy",
+        "stock": 7,
+        "rate": 3.5
+    },
+    {
+        "title": "Wedding Crashers",
+        "genre": "Comedy",
+        "stock": 7,
+        "rate": 3.5
+    },
+    {
+        "title": "Fire Wall",
+        "genre": "Action",
+        "stock": 7,
+        "rate": 3.5
+    },
+    {
+        "title": "Gone Girl",
+        "genre": "Thriller",
+        "stock": 7,
+        "rate": 4.5
+    },
+    {
+        "title": "The Sixth Girl",
+        "genre": "Thriller",
+        "stock": 4,
+        "rate": 3.5
+    },
+    {
+        "title": "The Avengers",
+        "genre": "Action",
+        "stock": 7,
+        "rate": 3.5
+    }
+]

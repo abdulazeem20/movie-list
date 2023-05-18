@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie</title>
+        <link rel="stylesheet" href="http://localhost:100/fontawesome6/css/all.min.css">
+        <link rel="stylesheet" href="./main.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <h3 class="page-title">My Movie List</h3>
+        </header>
+
+        <main class="main">
+            <aside class="list">
+                <h1 class="info">
+                    Genre
+                </h1>
+                <ul class="genres">
+                    <li class="genre">
+                        <button type="button" data-genre="all" class="genre-btn active">
+                            All
+                        </button>
+                    </li>
+                </ul>
+            </aside>
+            <section class="records">
+                <h1 class="info">
+                    There are <span class="quantity">0</span> Movie(s) Available
+                </h1>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Genre</th>
+                                <th>Stock</th>
+                                <th>Rate</th>
+                                <th>Liked</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <script src="http://localhost:100/jquery.js"></script>
+        <script src="http://localhost:100/fontawesome6/js/all.min.js"></script>
+        <script src="./script.js" type="module"></script>
+    </body>
+
+</html

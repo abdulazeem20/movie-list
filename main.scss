@@ -1,0 +1,182 @@
+@use "./root" as *;
+
+.header {
+    background: $primary;
+    color: #ffffff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    @include responsiveMedia($md) {
+        box-shadow: 0 0.2rem 0.6rem #00000045;
+    }
+}
+.page-title {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-weight: 500;
+}
+
+.main {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: grid;
+    padding: 0 1rem;
+    @include responsiveMedia($md) {
+        gap: 1rem;
+        grid-template-columns: 0.2fr 1fr;
+    }
+}
+
+.info {
+    font-weight: 400;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.list {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: auto 1fr;
+    position: sticky;
+    top: 4rem;
+    background: $white;
+    padding: 1rem 0;
+    width: 100%;
+    @include responsiveMedia($md) {
+        padding: 1rem 0;
+        height: max-content;
+    }
+    .genres {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        color: $white;
+        width: 100%;
+        padding: 0.5rem 0;
+        gap: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        overflow: hidden;
+        @include responsiveMedia($md) {
+            display: block;
+            gap: 0;
+            padding: 0;
+            border-radius: 0.25rem;
+        }
+        .genre {
+            flex-grow: 1;
+            overflow: hidden;
+            @include responsiveMedia($md) {
+                border-bottom: 0.1rem solid $white;
+                &:last-of-type {
+                    border: none;
+                }
+            }
+            button {
+                border-radius: 0.25rem;
+                background: $primary;
+                width: 100%;
+                text-align: center;
+                padding: 0.8em 1em;
+                font-size: clamp(0.8rem, 3vw, 1rem);
+                cursor: pointer;
+                color: $white;
+                border: none;
+                transition: 0.25s ease-in-out background;
+                outline: none;
+                @include responsiveMedia($md) {
+                    border-radius: 0;
+                    text-align: left;
+                }
+                &:is(:hover, :focus) {
+                    background: lighten($primary, 8%);
+                }
+                &.active {
+                    background: darken($primary, 10%);
+                }
+            }
+        }
+    }
+}
+
+.records {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 0;
+    grid-template-rows: auto 1fr;
+    .table-responsive {
+        overflow-x: auto;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 0.25rem;
+            overflow: hidden;
+            thead {
+                background: $primary;
+                color: $white;
+            }
+            th {
+                text-align: left;
+                font-size: clamp(1rem, 3vw, 1.3rem);
+                width: 20%;
+                &:first-of-type {
+                    width: 40%;
+                }
+            }
+            th,
+            td {
+                padding: 0.5em;
+                height: 2.4rem;
+                &.right {
+                    text-align: right;
+                }
+                &.center {
+                    text-align: center;
+                }
+                border-right: 0.1rem solid $white;
+                border-bottom: 0.1rem solid $white;
+                &:last-of-type {
+                    border-right: none;
+                }
+            }
+            tbody tr {
+                font-size: clamp(0.8rem, 3vw, 1rem);
+                background: #{$primary}23;
+                &.close {
+                    display: none;
+                }
+            }
+            td {
+                vertical-align: bottom;
+            }
+        }
+    }
+    .delete {
+        background: $danger;
+        border: none;
+        font-size: inherit;
+        padding: 0.5em 1em;
+        color: $white;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: 0.25s ease-in-out background;
+        outline: none;
+        &:is(:hover, :focus) {
+            background: darken($danger, 10%);
+        }
+    }
+
+    .heart {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        outline: none;
+        color: $primary;
+        &:is(:hover, :focus) {
+            color: darken($primary, 30%);
+        }
+    }
+}
