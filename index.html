@@ -2,59 +2,72 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Movie</title>
-        <link rel="stylesheet" href="http://localhost:100/fontawesome6/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie List</title>
         <link rel="stylesheet" href="./main.css">
     </head>
 
     <body>
+
         <header class="header">
-            <h3 class="page-title">My Movie List</h3>
+            <h4>
+                My Movie List
+            </h4>
         </header>
 
-        <main class="main">
-            <aside class="list">
-                <h1 class="info">
-                    Genre
-                </h1>
-                <ul class="genres">
-                    <li class="genre">
-                        <button type="button" data-genre="all" class="genre-btn active">
-                            All
-                        </button>
-                    </li>
-                </ul>
-            </aside>
-            <section class="records">
-                <h1 class="info">
-                    There are <span class="quantity">0</span> Movie(s) Available
-                </h1>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Genre</th>
-                                <th>Stock</th>
-                                <th>Rate</th>
-                                <th>Liked</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+        <aside class="aside">
+            <h4 class="title">
+                Genre
+            </h4>
+            <ul class="genre-wrapper">
+                <li class="genre-list">
+                    <button class="btn" data-genre="all">
+                        All
+                    </button>
+                </li>
+                <li class="genre-list">
+                    <button class="btn" data-genre="action">
+                        Action
+                    </button>
+                </li>
+                <li class="genre-list">
+                    <button class="btn" data-genre="thriller">
+                        Thriller
+                    </button>
+                </li>
+                <li class="genre-list">
+                    <button class="btn" data-genre="comedy">
+                        Comedy
+                    </button>
+                </li>
+            </ul>
+        </aside>
 
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+        <main class="main">
+            <h4 class="title">You have <span class="count"></span> Movie(s)</h4>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Stock</th>
+                            <th>Rate</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
         </main>
 
-        <script src="http://localhost:100/jquery.js"></script>
-        <script src="http://localhost:100/fontawesome6/js/all.min.js"></script>
+        <!-- <script src="http://localhost:100/jquery.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./script.js" type="module"></script>
     </body>
 
-</html
+</html>
